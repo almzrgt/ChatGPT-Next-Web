@@ -1,16 +1,5 @@
-import { Analytics } from "@vercel/analytics/react";
+import { ProspectDashboard } from "./components/prospect-dashboard";
 
-import { Home } from "./components/home";
-
-import { getServerSideConfig } from "./config/server";
-
-const serverConfig = getServerSideConfig();
-
-export default async function App() {
-  return (
-    <>
-      <Home />
-      {serverConfig?.isVercel && <Analytics />}
-    </>
-  );
+export default function App() {
+  return <ProspectDashboard />;
 }
